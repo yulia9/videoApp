@@ -3,19 +3,32 @@
 [![Dependency Status](https://david-dm.org/preboot/angularjs-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angularjs-webpack/dev-status.svg)](https://david-dm.org/preboot/angularjs-webpack#info=devDependencies)
 
 A complete, yet simple, starter for AngularJS using Webpack.
-
-This workflow serves as a starting point for building AngularJS (1.x) applications using Webpack 2.x. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
-
-* Heavily commented webpack configuration with reasonable defaults.
-* ES6, and ES7 support with babel.
-* Source maps included in all builds.
-* Development server with live reload.
-* Production builds with cache busting.
-* Testing environment using karma to run tests and jasmine as the framework.
-* Code coverage when tests are run.
-* No gulp and no grunt, just npm scripts.
+* WEBPACK.
+* ES6 support with babel.
+* Server with live reload.
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
+
+### Project requirements
+
+ 1) Use AngularJS >= 1.5
+ 2) Use this instead of $scope
+ 3) Use this only for variables which should be available in html file
+ 4) Use components instead of directives
+ 5) use ES6
+ 
+ ### Initial requirements
+ 1) Factories:
+    1.	‘helper’ – factory, which will help to determine in which browser application was opened (for this you can use regexp) . Should determine Chrome, Opera, Firefox, Internet Explorer browser
+ 2) Services:
+       1. ‘contentRequest’ – service which is responsible for content requests (from youtube)
+       2. ‘contentHandler’ – service which works with JSON files
+ 3) Providers:
+       1. ‘loginService’ – takes data about user from localStorage or cookies, login the user
+ 4) Components: 
+    HTML structure should be done with help of components
+
+
 
 ### Quick start
 
@@ -23,10 +36,7 @@ This workflow serves as a starting point for building AngularJS (1.x) applicatio
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angularjs-webpack.git my-app
-
-# change directory to your app
-$ cd my-app
+$ git clone https://github.com/yulia9/videoApp.git
 
 # install the dependencies with npm
 $ npm install
