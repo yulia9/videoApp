@@ -1,8 +1,9 @@
 import angular from 'angular';
 
 import '../style/app.css';
+import components from  './components';
 
-let app = () => {
+let app = function() {
   return {
     template: require('./app.html'),
     controller: 'AppCtrl',
