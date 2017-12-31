@@ -1,5 +1,8 @@
 import angular from 'angular';
-import headerComponent from './headerComponent';
+import header from './header/headerComponent';
+import footer from './footer/footerComponent';
+import helper from '../factories/helperFactory';
 
-export default angular.module('app.components', [])
-  .component('headerComponent', headerComponent);
+export default angular.module('components', [header, footer, helper])
+ .name;
+

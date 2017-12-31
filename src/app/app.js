@@ -1,6 +1,6 @@
 import angular from 'angular';
-
 import '../style/app.css';
+
 import components from  './components';
 
 let app = function() {
@@ -19,7 +19,7 @@ class AppCtrl {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
+angular.module(MODULE_NAME, [components])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 
