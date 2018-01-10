@@ -2,8 +2,7 @@ import angular from 'angular';
 
 class headerController {
 	constructor(helper) {
-		this.greeting = 'Hello123';
-		console.log ('123', helper.isBrowser())
+		this.greeting = `Hello, ${helper.browser.name} user`;
 	}
 };
 headerController.$inject = ['helper'];
