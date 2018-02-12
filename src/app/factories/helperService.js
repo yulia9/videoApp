@@ -10,13 +10,13 @@ let browsers = {
 };
 let userAgent = window.navigator.userAgent;
 
-class helperFactory {
+class helperService {
   constructor() {
   }
 
 }
 
-helperFactory.prototype.browser =(function() {
+helperService.prototype.browser = (function() {
   let result;
 
   if (/chrome|crios|crmo/i.test(userAgent) && /^((?!(OPR)).)*$/i.test(userAgent) && /^((?!(Edge)).)*$/i.test(userAgent)) { // Google Chrome
@@ -36,11 +36,11 @@ helperFactory.prototype.browser =(function() {
     }
   }
 
-  // Task for Valera: add regexp for firefox and internet explorer (for other browsers by wish)
+  // Task for Valera: add regexp for Firefox and Internet explorer (for other browsers by wish)
 
   return result;
 })()
 
 export default angular.module('helper', [])
-  .service('helper', helperFactory)
+  .service('helper', helperService)
   .name;
