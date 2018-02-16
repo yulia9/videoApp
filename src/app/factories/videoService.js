@@ -9,14 +9,19 @@ class videoService {
     this.$http = $http;
   }
 
-  getVideosInfo() {
-    let search = '';
-    let nextPage = '';
+  /**
+   *
+   * @param searchValue - for searching youtube videos by user request
+   * @param nextPageValue - for searching youtube videos when user moves to the next page
+   * @returns Promise
+   */
+  getVideosInfo(searchValue, nextPageValue) {
+    let search = searchValue ? searchValue : '';
+    let nextPage = nextPageValue ? nextPageValue : '';
     // Template literals are used here. Read https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
     let src = `https://www.googleapis.com/youtube/v3/search?pageToken=${nextPage}&part=snippet&maxResults=${maxResults}&q=${search}&key=${youtubeKey}`;
 
     return this.$http.get(src).then(function(response) {
-      nextPage = response.data.nextPageToken;
       return response.data;
     })
   }

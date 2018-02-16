@@ -1,3 +1,14 @@
 <header>
   <h1> {{$ctrl.greeting}} </h1>
+
+  <section ng-if="$ctrl.isNewUser">
+   <form ng-submit="$ctrl.saveUserName(userName)">
+    <p> Hi, enter your name, please </p>
+    <input ng-model="userName"/>
+   </form>
+
+  </section>
+  <section ng-if="!$ctrl.isNewUser">
+    <p> Hi, {{$ctrl.userCookie}} </p>
+  </section>
 </header>
