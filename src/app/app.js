@@ -24,3 +24,5 @@ angular.module(MODULE_NAME, [components])
   .controller('AppCtrl', AppCtrl);
 
 export default MODULE_NAME;
+
+/*Comment first*/
