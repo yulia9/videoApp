@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import routing from './app.config';
-import '../style/app.css';
+import '../style/styles.scss';
 
 import components from  './components';
 
