@@ -1,4 +1,7 @@
 <section>
+	<input ng-model="searchVideo">
+	<button ng-click="$ctrl.findVideo(searchVideo)">search</button>
+	
   <ul>
     <li ng-repeat="video in $ctrl.videos">
       <!-- TODO: Valera: add more video parameters and styles vor video blocks-->

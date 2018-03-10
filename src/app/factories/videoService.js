@@ -15,7 +15,7 @@ class videoService {
    * @param nextPageValue - for searching youtube videos when user moves to the next page
    * @returns Promise
    */
-  getVideosInfo(searchValue, nextPageValue) {
+  getVideos(searchValue, nextPageValue) {
     let search = searchValue ? searchValue : '';
     let nextPage = nextPageValue ? nextPageValue : '';
     // Template literals are used here. Read https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
