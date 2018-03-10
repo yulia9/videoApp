@@ -11,7 +11,7 @@ class videoCtrl {
 
   getVideosInfo(obj, search) {
     // Getting data from video objects.
-    this.videoService.getVideosInfo(search).then(function (response) {
+    this.videoService.getVideos(search).then(function (response) {
       let videos = response.items;
       obj.videos = createVideoUrl(videos, obj.$sce);
       obj.nextPage = response.nextPageToken;
@@ -25,9 +25,8 @@ class videoCtrl {
   // Write to the localStorage text for searching. When user will reload
   // the page he will see videos by his last request.
   findVideo(text) {
-
+    this.getVideosInfo(this, text)
   }
-
 
 };
 
